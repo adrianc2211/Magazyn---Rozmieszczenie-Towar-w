@@ -20,5 +20,8 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Rozmieszczenie Towarów w Magazynie" Grid.Column="2" Grid.Row="2"/>
+
+        <TextBlock Text="wybierz akcję" Grid.Column="2" Grid.Row="2" Margin="0 20"/>
+        <Button/>
     </Grid>
 </Window>
