@@ -15,6 +15,10 @@ namespace Magazyn___Rozmieszczenie_Towarów.Models
         {
             IdPoz = idPoz;
             Opis = opis;
-        }   
+        }
+        public regal(char idPoz)
+        {
+            IdPoz = idPoz;
+        }
     }
 }
