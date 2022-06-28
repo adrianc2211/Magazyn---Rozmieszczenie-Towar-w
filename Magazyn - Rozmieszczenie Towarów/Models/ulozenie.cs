@@ -8,8 +8,8 @@ namespace Magazyn___Rozmieszczenie_Towarów.Models
 {
     internal class ulozenie
     {
-        public char IdPoz { get; set; }
-        public int IdTowaru { get; set; }
+        public regal IdPoz { get; set; }
+        public towary IdTowaru { get; set; }
         public int Ilosc { get; set; }
         public DateTime DataUmieszczenia { get; set; }
         public DateTime DataSciagniecia { get; set; }
