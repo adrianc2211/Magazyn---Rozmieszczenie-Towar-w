@@ -8,5 +8,6 @@ namespace Magazyn___Rozmieszczenie_Towarów.Models
 {
     internal class ulozenie
     {
+        public 
     }
 }

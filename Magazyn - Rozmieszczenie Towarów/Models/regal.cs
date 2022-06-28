@@ -8,5 +8,13 @@ namespace Magazyn___Rozmieszczenie_Towarów.Models
 {
     internal class regal
     {
+        public char IdPoz { get; }
+        public string Opis { get; }
+
+        public regal(char idPoz, string opis)
+        {
+            IdPoz = idPoz;
+            Opis = opis;
+        }   
     }
 }
