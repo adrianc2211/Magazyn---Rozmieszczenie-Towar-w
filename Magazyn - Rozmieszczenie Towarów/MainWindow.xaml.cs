@@ -23,6 +23,7 @@ namespace Magazyn___Rozmieszczenie_Towarów
         public MainWindow()
         {
             InitializeComponent();
+
         }
     }
 }

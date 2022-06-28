@@ -9,19 +9,68 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="50" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+
             <ColumnDefinition Width="20" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Rozmieszczenie Towarów w Magazynie" Grid.Column="2" Grid.Row="2"/>
 
-        <TextBlock Text="wybierz akcję" Grid.Column="2" Grid.Row="2" Margin="0 20"/>
-        <Button/>
+        <Rectangle Grid.Column="0" Grid.Row="0" Grid.RowSpan="10" Grid.ColumnSpan="17">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="WhiteSmoke" />
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Grid.Column="0" Grid.Row="0" Grid.RowSpan="10" Grid.ColumnSpan="4">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="gray" />
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <TextBlock Text="Rozmieszczenie Towarów w Magazynie" Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="5"/>
+
+        <TextBlock Text="Wybierz akcję" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Margin="0" TextAlignment="Center" FontSize="20" Foreground="White"/>
+
+
+        <StackPanel x:Name="StackPanel1" Grid.Column="1" Grid.Row="2"  Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="0 0 20 0">
+            <StackPanel.Resources>
+            <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="0,5,0,0"/>
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button Content="Zajmij miejsce" x:Name="ZajmijMiejsce" BorderBrush="Black" BorderThickness="1"/>
+            <Button Content="Zwolnij miejsce" x:Name="ZwolnijMiejsce" BorderBrush="Black" BorderThickness="1"/>
+            <Button Content="Dodaj produkt" x:Name="DodajProdukt" BorderBrush="Black" BorderThickness="1"/>
+            <Button Content="Znajdź produkt" x:Name="ZnajdźProduktRegal" BorderBrush="Black" BorderThickness="1"/>
+            <Button Content="Wolne miejsca" x:Name="WyswietlWolneMiejsca" BorderBrush="Black" BorderThickness="1"/>
+            <Button Content="Wyświetl regał" x:Name="WyswietlRegal" BorderBrush="Black" BorderThickness="1"/>
+        </StackPanel>
+        
+
     </Grid>
 </Window>
