@@ -10,8 +10,9 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="50" />
-            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="1" />
             <ColumnDefinition Width="50" />
             <ColumnDefinition Width="50" />
             <ColumnDefinition Width="50" />
@@ -40,7 +41,7 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <Rectangle Grid.Column="0" Grid.Row="0" Grid.RowSpan="10" Grid.ColumnSpan="17">
+        <Rectangle Grid.Column="0" Grid.Row="0" Grid.RowSpan="10" Grid.ColumnSpan="18">
             <Rectangle.Fill>
                 <SolidColorBrush Color="WhiteSmoke" />
             </Rectangle.Fill>
@@ -50,10 +51,14 @@
                 <SolidColorBrush Color="gray" />
             </Rectangle.Fill>
         </Rectangle>
+        <Rectangle Grid.Column="4" Grid.Row="0" Grid.RowSpan="10">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="black" />
+            </Rectangle.Fill>
+        </Rectangle>
 
         <TextBlock Text="Rozmieszczenie Towarów w Magazynie" Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="5"/>
-
-        <TextBlock Text="Wybierz akcję" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Margin="0" TextAlignment="Center" FontSize="20" Foreground="White"/>
+        <TextBlock Text="Wybierz akcję" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Margin="0 0 20 0" TextAlignment="Center" FontSize="20" Foreground="White"/>
 
 
         <StackPanel x:Name="StackPanel1" Grid.Column="1" Grid.Row="2"  Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="0 0 20 0">
