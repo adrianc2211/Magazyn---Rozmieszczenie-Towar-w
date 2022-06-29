@@ -17,7 +17,6 @@ namespace Magazyn___Rozmieszczenie_Towarów.Models
             IdTowaru = idTowaru;
             NazwaTowaru = nazwaTowaru;
             this.waga = waga;
-            //aaaasd
         }
     }
 }
