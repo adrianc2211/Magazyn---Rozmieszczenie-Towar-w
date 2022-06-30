@@ -99,8 +99,8 @@
                     <Setter Property="Padding" Value="10 5"/>
                 </Style>
             </StackPanel.Resources>
-            <Button Content="Dodaj" x:Name="Dodaj" BorderBrush="#70d66b" BorderThickness="1" />
-            <Button Content="Anuluj" x:Name="Anuluj" BorderBrush="#d66b6b" BorderThickness="1" Background="#fad7d7"/>
+            <Button Content="Dodaj" x:Name="Dodaj" BorderBrush="#70d66b" BorderThickness="1" Command="{Binding DodajCommand}"/>
+            <Button Content="Anuluj" x:Name="Anuluj" BorderBrush="#d66b6b" BorderThickness="1" Background="#fad7d7" Command="{Binding AnulujCommand}"/>
         </StackPanel>
         
         <!--Formularz do wporwadzania danych do tabeli towary-->
@@ -108,13 +108,13 @@
         <StackPanel Grid.Column="7" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="4">
 
             <TextBlock Text="ID Towaru:"  FontSize="20"/>
-            <TextBox x:Name="IDTowaruTB" FontSize="16"   MaxLength="10" Width="120" HorizontalAlignment="Left" Margin="0 5 0 10"/>
+            <TextBox x:Name="IDTowaruTB" FontSize="16"   MaxLength="10" Width="120" HorizontalAlignment="Left" Margin="0 5 0 10" Text="{Binding IdTowaru}"/>
 
             <TextBlock Text="Nazwa Towaru:"  FontSize="20" HorizontalAlignment="Left"/>
-            <TextBox x:Name="NazwaTowaruTB" FontSize="16" MaxLength="100" Margin="0 5 0 10"/>
+            <TextBox x:Name="NazwaTowaruTB" FontSize="16" MaxLength="100" Margin="0 5 0 10" Text="{Binding NazwaTowaru}"/>
 
             <TextBlock Text="Waga [kg]:"  FontSize="20" />
-            <TextBox x:Name="WagaTowaruTB" FontSize="16" MaxLength="7" HorizontalAlignment="Left" Width="95" Margin="0 5 0 10"/>
+            <TextBox x:Name="WagaTowaruTB" FontSize="16" MaxLength="7" HorizontalAlignment="Left" Width="95" Margin="0 5 0 10" Text="{Binding WagaTowaru}"/>
 
         </StackPanel>
 
