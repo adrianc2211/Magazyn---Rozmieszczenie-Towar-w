@@ -58,6 +58,9 @@
     <Compile Include="Views\DodajProduktView.xaml.cs">
       <DependentUpon>DodajProduktView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\WyswietlProduktyView.xaml.cs">
+      <DependentUpon>WyswietlProduktyView.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +74,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\DodajProduktView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WyswietlProduktyView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
