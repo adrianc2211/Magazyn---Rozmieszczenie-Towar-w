@@ -55,7 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\DodajProduktViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\WyswietlProduktyViewModel.cs" />
     <Compile Include="Views\DodajProduktView.xaml.cs">
       <DependentUpon>DodajProduktView.xaml</DependentUpon>
     </Compile>
