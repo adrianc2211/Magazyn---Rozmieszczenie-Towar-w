@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Magazyn___Rozmieszczenie_Towarów.Models
 {
-    internal class regal
+    public class regal
     {
         public char IdPoz { get; }
         public string Opis { get; }

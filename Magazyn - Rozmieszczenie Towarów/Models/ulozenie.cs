@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Magazyn___Rozmieszczenie_Towarów.Models
 {
-    internal class ulozenie
+    public class ulozenie
     {
         public regal IdPoz { get; set; }
         public towary IdTowaru { get; set; }

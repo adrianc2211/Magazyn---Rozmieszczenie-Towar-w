@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="ViewModels\DodajProduktViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\TowaryViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\WyswietlProduktyViewModel.cs" />
     <Compile Include="Views\DodajProduktView.xaml.cs">

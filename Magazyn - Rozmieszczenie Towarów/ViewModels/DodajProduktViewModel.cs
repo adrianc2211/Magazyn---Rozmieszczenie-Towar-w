@@ -44,5 +44,10 @@ namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
 
         public ICommand DodajCommand { get; }
         public ICommand CancellCommand { get; }
+
+        public DodajProduktViewModel()
+        {
+                
+        }
 }
 }

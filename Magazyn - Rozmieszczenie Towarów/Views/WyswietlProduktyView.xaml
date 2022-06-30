@@ -78,7 +78,7 @@
             </StackPanel.Resources>
             <Button Content="Zajmij miejsce" x:Name="ZajmijMiejsceB"/>
             <Button Content="Zwolnij miejsce" x:Name="ZwolnijMiejsceB"/>
-            <Button Content="Dodaj produkt" x:Name="DodajProduktB"/>
+            <Button Content="Dodaj produkt" x:Name="DodajProduktB" Command="{Binding DodajProductCommand}"/>
             <Button Content="Wyświetl Produkty" x:Name="WyswietlProduktyB"/>
             <Button Content="Wolne miejsca" x:Name="WyswietlWolneMiejscaB"/>
             <Button Content="Wyświetl regał" x:Name="WyswietlRegalB"/>

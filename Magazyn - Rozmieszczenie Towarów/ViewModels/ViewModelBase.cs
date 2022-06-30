@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
 {
-    internal class ViewModelBase : INotifyPropertyChanged
+    public class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
