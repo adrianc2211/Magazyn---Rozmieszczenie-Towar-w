@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
 {
-    internal class DodajProduktViewModel : ViewModelBase
+    public class DodajProduktViewModel : ViewModelBase
     {
         private int _IdTowaru;
         public int IdTowaru

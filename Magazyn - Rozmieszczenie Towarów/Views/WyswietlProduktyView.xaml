@@ -89,22 +89,9 @@
 
        
         <TextBlock Text="Wyświetl produkty" Grid.Column="6" Grid.Row="1" Grid.ColumnSpan="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
-        <ListView Grid.Column="6" Grid.Row="3" Grid.ColumnSpan="10" Grid.RowSpan="5">
+        <ListView Grid.Column="6" Grid.Row="3" Grid.ColumnSpan="10" Grid.RowSpan="5" ItemsSource="{Binding Towary}">
 
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
-
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
+            
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalAlignment" Value="Stretch"/>
@@ -117,7 +104,7 @@
                     <GridViewColumn Header="ID Produktu">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Padding="5 0 5 0" Text="2000"/>
+                                <TextBlock Padding="5 0 5 0" Text="{Binding IdTowaru}"/>
                             </DataTemplate>
                     </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -125,7 +112,7 @@
                     <GridViewColumn Header="Nazwa Produktu">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Padding="5 0 5 0" Text="Pergola z grotem"/>
+                                <TextBlock Padding="5 0 5 0" Text="{Binding NazwaTowaru}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -133,7 +120,7 @@
                     <GridViewColumn Header="Waga Produktu [kg]">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Padding="5 0 5 0" Text="8.5"/>
+                                <TextBlock Padding="5 0 5 0" Text="{Binding WagaTowaru}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

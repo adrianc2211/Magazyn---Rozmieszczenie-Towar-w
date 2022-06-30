@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
 {
-    internal class MainViewModel : ViewModelBase
+    public class MainViewModel : ViewModelBase
     {
+        public ViewModelBase CurrentViewModel { get; }
+
+        public MainViewModel()
+        {
+            CurrentViewModel = new WyswietlProduktyViewModel();
+        }
     }
 }

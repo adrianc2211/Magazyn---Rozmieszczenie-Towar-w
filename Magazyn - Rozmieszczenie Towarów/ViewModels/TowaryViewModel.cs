@@ -12,11 +12,11 @@ namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
         private readonly towary _towary;
         public int IdTowaru => _towary.IdTowaru;
         public string NazwaTowaru => _towary?.NazwaTowaru;
-        public float waga => _towary.waga;
+        public float WagaTowaru => _towary.waga;
 
         public TowaryViewModel(towary towary)
         {
-            _towary = towary
+            _towary = towary;
         }
     }
 }
