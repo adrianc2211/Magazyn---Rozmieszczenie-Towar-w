@@ -16,6 +16,12 @@
             <DataTemplate DataType="{x:Type vms:WyswietlProduktyViewModel}">
                 <views:WyswietlProduktyView/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:ZajmijMiejsceViewModel}">
+                <views:ZajmijMiejsceView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:WyswietlRegalViewModel}">
+                <views:WyswietlRegalView/>
+            </DataTemplate>
         </Grid.Resources>
 
         <ContentControl Content="{Binding CurrentViewModel}"/>

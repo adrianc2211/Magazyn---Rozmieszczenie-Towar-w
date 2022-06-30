@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -60,17 +62,31 @@
     <Compile Include="Commands\DodajCommand.cs" />
     <Compile Include="Commands\GoToWyswietlProduktyViewCommand.cs" />
     <Compile Include="Commands\GoToDodajProductViewCommand.cs" />
+    <Compile Include="Commands\GoToZajmijMiejsceViewCommand.cs" />
     <Compile Include="Stores\NavigationStore.cs" />
     <Compile Include="ViewModels\DodajProduktViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\TowaryViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\WyswietlProduktyViewModel.cs" />
+    <Compile Include="ViewModels\WyswietlRegalViewModel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewModels\WyswietlRegalViewModel.Designer.cs">
+      <DependentUpon>WyswietlRegalViewModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ZajmijMiejsceViewModel.cs" />
     <Compile Include="Views\DodajProduktView.xaml.cs">
       <DependentUpon>DodajProduktView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WyswietlProduktyView.xaml.cs">
       <DependentUpon>WyswietlProduktyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WyswietlRegalView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\WyswietlRegalView.Designer.cs">
+      <DependentUpon>WyswietlRegalView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ZajmijMiejsceView.xaml.cs">
       <DependentUpon>ZajmijMiejsceView.xaml</DependentUpon>

@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
 {
-    public class DodajProduktViewModel : ViewModelBase
+    public class ZajmijMiejsceViewModel:ViewModelBase
     {
         private int _IdTowaru;
         public int IdTowaru
@@ -23,25 +23,25 @@ namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
             }
         }
 
-        private string _NazwaTowaru;
-        public string NazwaTowaru
+        private char IdPoz;
+        public char _IdPoz
         {
-            get { return _NazwaTowaru; }
+            get { return _IdPoz; }
             set
             {
-                _NazwaTowaru = value;
-                OnPropertyChange(nameof(NazwaTowaru));
+                _IdPoz = value;
+                OnPropertyChange(nameof(IdPoz));
             }
         }
 
-        private string _WagaTowaru;
-        public string WagaTowaru
+        private string _IloscT;
+        public string IloscT
         {
-            get { return _WagaTowaru; }
+            get { return _IloscT; }
             set
             {
-                _WagaTowaru = value;
-                OnPropertyChange(nameof(WagaTowaru));
+                _IloscT = value;
+                OnPropertyChange(nameof(IloscT));
             }
         }
 
@@ -52,7 +52,7 @@ namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
         public ICommand GoToZajmijMiejsceViewCommand { get; }
         public ICommand GoToWsywietlRegalViewCommand { get; }
 
-        public DodajProduktViewModel(NavigationStore navigationStore)
+        public ZajmijMiejsceViewModel(NavigationStore navigationStore)
         {
             DodajCommand = new DodajCommand();
             CancellCommand = new CancellCommand();
