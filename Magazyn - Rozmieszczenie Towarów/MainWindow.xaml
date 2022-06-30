@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid HorizontalAlignment="Center">
-        <views:WyswietlProduktyView DataContext="{Binding CurrentViewModel}"/>
+        <views:DodajProduktView DataContext="{Binding CurrentViewModel}"/>
         <!--
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>

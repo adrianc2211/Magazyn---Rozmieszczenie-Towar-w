@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Magazyn___Rozmieszczenie_Towarów.Commands;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,7 +48,7 @@ namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
 
         public DodajProduktViewModel()
         {
-                
+            DodajCommand = new DodajCommand();
         }
 }
 }

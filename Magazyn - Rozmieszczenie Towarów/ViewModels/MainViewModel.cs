@@ -12,7 +12,7 @@ namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
 
         public MainViewModel()
         {
-            CurrentViewModel = new WyswietlProduktyViewModel();
+            CurrentViewModel = new DodajProduktViewModel();
         }
     }
 }
