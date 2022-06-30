@@ -10,7 +10,7 @@
         <!--Siatka aplikacji - kolukmny i wiersze-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
-            
+
             <ColumnDefinition Width="50" />
             <ColumnDefinition Width="50" />
             <ColumnDefinition Width="59" />
@@ -81,14 +81,12 @@
                     <Setter Property="Padding" Value="10 5"/>
                 </Style>
             </StackPanel.Resources>
-            <Button Content="Zajmij miejsce" x:Name="ZajmijMiejsceB"/>
-            <Button Content="Zwolnij miejsce" x:Name="ZwolnijMiejsceB"/>
-            <Button Content="Dodaj produkt" x:Name="DodajProduktB"/>
-            <Button Content="Wyświetl Produkty" x:Name="WyswietlProduktyB"/>
-            <Button Content="Wolne miejsca" x:Name="WyswietlWolneMiejscaB"/>
-            <Button Content="Wyświetl regał" x:Name="WyswietlRegalB"/>
+            <Button Content="Zajmij miejsce" x:Name="ZajmijMiejsceB" Command="{Binding GoToZajmijMiejsceViewCommand}"/>
+            <Button Content="Wyświetl regał" x:Name="ZwolnijMiejsceB" Command="{Binding GoToWsywietlRegalViewCommand}"/>
+            <Button Content="Dodaj produkt" x:Name="DodajProduktB" Command="{Binding GoToDodajProductViewCommand}"/>
+            <Button Content="Wyświetl Produkty" x:Name="WyswietlProduktyB" Command="{Binding GoToWyswietlProduktyViewCommand}"/>
         </StackPanel>
-        
+
         <!--Przyciski dodaj i anuluj-->
         <StackPanel x:Name="ActionPanel" Grid.Column="1" Grid.Row="7"  Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="0 0 20 0">
             <StackPanel.Resources>
@@ -100,9 +98,9 @@
                 </Style>
             </StackPanel.Resources>
             <Button Content="Dodaj" x:Name="Dodaj" BorderBrush="#70d66b" BorderThickness="1" Command="{Binding DodajCommand}"/>
-            <Button Content="Anuluj" x:Name="Anuluj" BorderBrush="#d66b6b" BorderThickness="1" Background="#fad7d7" Command="{Binding AnulujCommand}"/>
+            <Button Content="Anuluj" x:Name="Anuluj" BorderBrush="#d66b6b" BorderThickness="1" Background="#fad7d7" Command="{Binding GoToWyswietlProduktyViewCommand}"/>
         </StackPanel>
-        
+
         <!--Formularz do wporwadzania danych do tabeli towary-->
         <TextBlock Text="Dodaj produkt" Grid.Column="7" Grid.Row="1" Grid.ColumnSpan="8" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
         <StackPanel Grid.Column="7" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="4">

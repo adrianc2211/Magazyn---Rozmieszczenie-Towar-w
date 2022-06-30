@@ -55,8 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\CancellCommand.cs" />
     <Compile Include="Commands\CommandBase.cs" />
     <Compile Include="Commands\DodajCommand.cs" />
+    <Compile Include="Commands\GoToWyswietlProduktyViewCommand.cs" />
+    <Compile Include="Commands\GoToDodajProductViewCommand.cs" />
     <Compile Include="Stores\NavigationStore.cs" />
     <Compile Include="ViewModels\DodajProduktViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -68,6 +71,9 @@
     </Compile>
     <Compile Include="Views\WyswietlProduktyView.xaml.cs">
       <DependentUpon>WyswietlProduktyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ZajmijMiejsceView.xaml.cs">
+      <DependentUpon>ZajmijMiejsceView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -86,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\WyswietlProduktyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ZajmijMiejsceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

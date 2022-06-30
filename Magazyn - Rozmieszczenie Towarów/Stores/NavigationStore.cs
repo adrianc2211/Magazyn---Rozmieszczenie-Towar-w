@@ -16,8 +16,18 @@ namespace Magazyn___Rozmieszczenie_Towarów.Stores
             get => _currentViewModel;
             set 
             { 
-                _currentViewModel = value; 
+                _currentViewModel = value;
+                OnCurrentViewModelChanged();
             }
         }
+        //powiadomienie o zmianie viewmodel dla mainviewmodel
+        public event Action CurrentViewModelChanged;
+
+        private void OnCurrentViewModelChanged()
+        {
+            CurrentViewModelChanged?.Invoke();
+        }
     }
+
+
 }

@@ -1,6 +1,8 @@
 ﻿using Magazyn___Rozmieszczenie_Towarów.Commands;
+using Magazyn___Rozmieszczenie_Towarów.Stores;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,10 +47,17 @@ namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
 
         public ICommand DodajCommand { get; }
         public ICommand CancellCommand { get; }
+        public ICommand GoToDodajProductViewCommand { get; }
+        public ICommand GoToWyswietlProduktyViewCommand { get; }
+        public ICommand GoToZajmijMiejsceViewCommand { get; }
+        public ICommand GoToWsywietlRegalViewCommand { get; }
 
-        public DodajProduktViewModel()
+        public DodajProduktViewModel(NavigationStore navigationStore)
         {
             DodajCommand = new DodajCommand();
+            CancellCommand = new CancellCommand();
+            GoToWyswietlProduktyViewCommand = new GoToWyswietlProduktyViewCommand(navigationStore);
+            GoToDodajProductViewCommand = new GoToDodajProductViewCommand(navigationStore);
         }
 }
 }

@@ -15,6 +15,12 @@ namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
         public MainViewModel(NavigationStore navigationStore)
         {
             _navigationStore = navigationStore;
+            _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;        
+        }
+
+        private void OnCurrentViewModelChanged()
+        {
+            OnPropertyChange(nameof(CurrentViewModel));
         }
 
         public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;

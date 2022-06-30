@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Magazyn___Rozmieszczenie_Towarów.Views.WyswietlProduktyView"
+﻿<UserControl x:Class="Magazyn___Rozmieszczenie_Towarów.Views.ZajmijMiejsceView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -60,7 +60,12 @@
                 <SolidColorBrush Color="black" />
             </Rectangle.Fill>
         </Rectangle>
-
+        <!--Linia między stascxkpanelami-->
+        <Rectangle Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="4" Height="1" VerticalAlignment="Center">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="black" />
+            </Rectangle.Fill>
+        </Rectangle>
 
         <TextBlock Text="Wybierz akcję" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Margin="0 0 20 0" TextAlignment="Center" FontSize="20" Foreground="White"/>
 
@@ -80,51 +85,39 @@
             <Button Content="Wyświetl regał" x:Name="ZwolnijMiejsceB" Command="{Binding GoToWsywietlRegalViewCommand}"/>
             <Button Content="Dodaj produkt" x:Name="DodajProduktB" Command="{Binding GoToDodajProductViewCommand}"/>
             <Button Content="Wyświetl Produkty" x:Name="WyswietlProduktyB" Command="{Binding GoToWyswietlProduktyViewCommand}"/>
+        </StackPanel>
+
+        <!--Przyciski dodaj i anuluj-->
+        <StackPanel x:Name="ActionPanel" Grid.Column="1" Grid.Row="7"  Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="0 0 20 0">
+            <StackPanel.Resources>
+                <Style  TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="0,5,0,0"/>
+                    <Setter Property="FontSize" Value="12"/>
+                    <Setter Property="Background" Value="#d7fad7"/>
+                    <Setter Property="Padding" Value="10 5"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button Content="Dodaj" x:Name="Dodaj" BorderBrush="#70d66b" BorderThickness="1" Command="{Binding DodajCommand}"/>
+            <Button Content="Anuluj" x:Name="Anuluj" BorderBrush="#d66b6b" BorderThickness="1" Background="#fad7d7" Command="{Binding GoToWsywietlRegalViewCommand}"/>
+        </StackPanel>
+
+        <!--Formularz do wporwadzania danych do tabeli towary-->
+        <TextBlock Text="Zajmij miejsce" Grid.Column="7" Grid.Row="1" Grid.ColumnSpan="8" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+        <StackPanel Grid.Column="7" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="4">
+
+            <TextBlock Text="Nr Miejsca:"  FontSize="20"/>
+            <ComboBox ItemsSource="{Binding}" SelectedValuePath="IdPoz" DisplayMemberPath="" FontSize="16" Width="120" HorizontalAlignment="Left" Margin="0 5 0 10"/>
+
+            <TextBlock Text="Id Towaru:"  FontSize="20"/>
+            <ComboBox ItemsSource="{Binding}" SelectedValuePath="IdTowaru" DisplayMemberPath="" FontSize="16" Width="120" HorizontalAlignment="Left" Margin="0 5 0 10"/>
+            <!--
+            <TextBlock Text="Nazwa Towaru:"  FontSize="20" HorizontalAlignment="Left"/>
+            <TextBox x:Name="NazwaTowaruTB" FontSize="16" MaxLength="100" Margin="0 5 0 10" Text="{Binding NazwaTowaru}"/>
+            -->
+            <TextBlock Text="Ilość [szt]:"  FontSize="20" />
+            <TextBox x:Name="IloscTowaruTB" FontSize="16" MaxLength="7" HorizontalAlignment="Left" Width="95" Margin="0 5 0 10" Text="{Binding IloscT}"/>
 
         </StackPanel>
 
-        
-        <!--Pole wyświetlające wszystkie towary w bazie dnaych-->
-
-       
-        <TextBlock Text="Wyświetl produkty" Grid.Column="6" Grid.Row="1" Grid.ColumnSpan="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
-        <ListView Grid.Column="6" Grid.Row="3" Grid.ColumnSpan="10" Grid.RowSpan="5" ItemsSource="{Binding Towary}">
-
-            
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
-                </Style>
-            </ListView.ItemContainerStyle>
-            <ListView.View>
-                
-                <GridView>
-                    
-                    <GridViewColumn Header="ID Produktu">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Padding="5 0 5 0" Text="{Binding IdTowaru}"/>
-                            </DataTemplate>
-                    </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-
-                    <GridViewColumn Header="Nazwa Produktu">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Padding="5 0 5 0" Text="{Binding NazwaTowaru}"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    
-                    <GridViewColumn Header="Waga Produktu [kg]">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Padding="5 0 5 0" Text="{Binding WagaTowaru}"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                </GridView>
-            </ListView.View>
-        </ListView>
     </Grid>
 </UserControl>

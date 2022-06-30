@@ -10,7 +10,7 @@ namespace Magazyn___Rozmieszczenie_Towarów.Models
     {
         public regal IdPoz { get; set; }
         public towary IdTowaru { get; set; }
-        public int Ilosc { get; set; }
+        public int IloscT { get; set; }
         public DateTime DataUmieszczenia { get; set; }
         public DateTime DataSciagniecia { get; set; }
     }

@@ -24,7 +24,7 @@ namespace Magazyn___Rozmieszczenie_Towarów
         protected override void OnStartup(StartupEventArgs e)
         {
             //ustalamy viewmodel przy uruchamianiu plikacji
-            _navigationStore.CurrentViewModel = new WyswietlProduktyViewModel();
+            _navigationStore.CurrentViewModel = new WyswietlProduktyViewModel(_navigationStore);
 
             MainWindow = new MainWindow()
             {
