@@ -4,9 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Magazyn___Rozmieszczenie_Towarów"
+        xmlns:views="clr-namespace:Magazyn___Rozmieszczenie_Towarów.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid HorizontalAlignment="Center">
+        <views:DodajProduktView/>
+        <!--
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="50" />
@@ -63,7 +66,7 @@
 
         <StackPanel x:Name="StackPanel1" Grid.Column="1" Grid.Row="2"  Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="0 0 20 0">
             <StackPanel.Resources>
-            <Style TargetType="{x:Type Button}">
+                <Style TargetType="{x:Type Button}">
                     <Setter Property="Margin" Value="0,5,0,0"/>
                     <Setter Property="FontSize" Value="12"/>
                 </Style>
@@ -75,7 +78,6 @@
             <Button Content="Wolne miejsca" x:Name="WyswietlWolneMiejsca" BorderBrush="Black" BorderThickness="1"/>
             <Button Content="Wyświetl regał" x:Name="WyswietlRegal" BorderBrush="Black" BorderThickness="1"/>
         </StackPanel>
-        
-
+-->
     </Grid>
 </Window>
