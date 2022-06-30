@@ -1,10 +1,10 @@
-﻿<UserControl x:Class="Magazyn___Rozmieszczenie_Towarów.Views.WyswietlProduktyView"
+﻿<UserControl x:Class="Magazyn___Rozmieszczenie_Towarów.Views.WyswietlRegalView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Magazyn___Rozmieszczenie_Towarów.Views"
-             mc:Ignorable="d" 
+                        mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <!--Siatka aplikacji - kolukmny i wiersze-->
@@ -83,43 +83,43 @@
 
         </StackPanel>
 
-        
-        <!--Pole wyświetlające wszystkie towary w bazie dnaych-->
 
-       
-        <TextBlock Text="Wyświetl produkty" Grid.Column="6" Grid.Row="1" Grid.ColumnSpan="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
-        <ListView Grid.Column="6" Grid.Row="3" Grid.ColumnSpan="10" Grid.RowSpan="5" ItemsSource="{Binding Towary}">
+        <!--Pole wyświetlające zajęte półki z tabeli ulozenie w bazie dnaych-->
 
-            
+
+        <TextBlock Text="Wyświetl regał" Grid.Column="6" Grid.Row="1" Grid.ColumnSpan="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+        <ListView Grid.Column="6" Grid.Row="3" Grid.ColumnSpan="10" Grid.RowSpan="5" ItemsSource="{Binding Ulozenie}">
+
+
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalAlignment" Value="Stretch"/>
                 </Style>
             </ListView.ItemContainerStyle>
             <ListView.View>
-                
+
                 <GridView>
-                    
-                    <GridViewColumn Header="ID Produktu">
+
+                    <GridViewColumn Header="Nr miejsca">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Padding="5 0 5 0" Text="{Binding IdPoz}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="ID Towaru">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Padding="5 0 5 0" Text="{Binding IdTowaru}"/>
                             </DataTemplate>
-                    </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-
-                    <GridViewColumn Header="Nazwa Produktu">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Padding="5 0 5 0" Text="{Binding NazwaTowaru}"/>
-                            </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    
-                    <GridViewColumn Header="Waga Produktu [kg]">
+
+                    <GridViewColumn Header="Ilość [szt]">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Padding="5 0 5 0" Text="{Binding WagaTowaru}"/>
+                                <TextBlock Padding="5 0 5 0" Text="{Binding IloscT}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

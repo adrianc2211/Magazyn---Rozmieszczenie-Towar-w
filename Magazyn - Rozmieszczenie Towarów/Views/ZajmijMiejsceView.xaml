@@ -84,7 +84,7 @@
             <Button Content="Zajmij miejsce" x:Name="ZajmijMiejsceB" Command="{Binding GoToZajmijMiejsceViewCommand}"/>
             <Button Content="Wyświetl regał" x:Name="ZwolnijMiejsceB" Command="{Binding GoToWsywietlRegalViewCommand}"/>
             <Button Content="Dodaj produkt" x:Name="DodajProduktB" Command="{Binding GoToDodajProductViewCommand}"/>
-            <Button Content="Wyświetl Produkty" x:Name="WyswietlProduktyB" Command="{Binding GoToWyswietlProduktyViewCommand}"/>
+            <Button Content="Wyświetl produkty" x:Name="WyswietlProduktyB" Command="{Binding GoToWyswietlProduktyViewCommand}"/>
         </StackPanel>
 
         <!--Przyciski dodaj i anuluj-->

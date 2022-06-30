@@ -30,6 +30,7 @@ namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
             GoToDodajProductViewCommand = new GoToDodajProductViewCommand(navigationStore);
             GoToWyswietlProduktyViewCommand = new GoToWyswietlProduktyViewCommand(navigationStore);
             GoToZajmijMiejsceViewCommand = new GoToZajmijMiejsceViewCommand(navigationStore);
+            GoToWsywietlRegalViewCommand = new GoToWsywietlRegalViewCommand(navigationStore);
         }
     }
 }

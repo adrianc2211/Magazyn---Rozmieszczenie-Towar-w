@@ -8,15 +8,15 @@ namespace Magazyn___Rozmieszczenie_Towarów.Models
 {
     public class regal
     {
-        public char IdPoz { get; }
+        public string IdPoz { get; }
         public string Opis { get; }
 
-        public regal(char idPoz, string opis)
+        public regal(string idPoz, string opis)
         {
             IdPoz = idPoz;
             Opis = opis;
         }
-        public regal(char idPoz)
+        public regal(string idPoz)
         {
             IdPoz = idPoz;
         }

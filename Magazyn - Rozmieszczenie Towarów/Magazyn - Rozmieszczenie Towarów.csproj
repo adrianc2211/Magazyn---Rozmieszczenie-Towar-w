@@ -60,6 +60,7 @@
     <Compile Include="Commands\CancellCommand.cs" />
     <Compile Include="Commands\CommandBase.cs" />
     <Compile Include="Commands\DodajCommand.cs" />
+    <Compile Include="Commands\GoToWsywietlRegalViewCommand.cs" />
     <Compile Include="Commands\GoToWyswietlProduktyViewCommand.cs" />
     <Compile Include="Commands\GoToDodajProductViewCommand.cs" />
     <Compile Include="Commands\GoToZajmijMiejsceViewCommand.cs" />
@@ -67,14 +68,10 @@
     <Compile Include="ViewModels\DodajProduktViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\TowaryViewModel.cs" />
+    <Compile Include="ViewModels\UlozenieViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\WyswietlProduktyViewModel.cs" />
-    <Compile Include="ViewModels\WyswietlRegalViewModel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ViewModels\WyswietlRegalViewModel.Designer.cs">
-      <DependentUpon>WyswietlRegalViewModel.cs</DependentUpon>
-    </Compile>
+    <Compile Include="ViewModels\WyswietlRegalViewModel.cs" />
     <Compile Include="ViewModels\ZajmijMiejsceViewModel.cs" />
     <Compile Include="Views\DodajProduktView.xaml.cs">
       <DependentUpon>DodajProduktView.xaml</DependentUpon>
@@ -82,11 +79,8 @@
     <Compile Include="Views\WyswietlProduktyView.xaml.cs">
       <DependentUpon>WyswietlProduktyView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\WyswietlRegalView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\WyswietlRegalView.Designer.cs">
-      <DependentUpon>WyswietlRegalView.cs</DependentUpon>
+    <Compile Include="Views\WyswietlRegalView.xaml.cs">
+      <DependentUpon>WyswietlRegalView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ZajmijMiejsceView.xaml.cs">
       <DependentUpon>ZajmijMiejsceView.xaml</DependentUpon>
@@ -108,6 +102,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\WyswietlProduktyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WyswietlRegalView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
