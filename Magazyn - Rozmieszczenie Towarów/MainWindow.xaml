@@ -5,10 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Magazyn___Rozmieszczenie_Towarów"
         xmlns:views="clr-namespace:Magazyn___Rozmieszczenie_Towarów.Views"
+        xmlns:vms="clr-namespace:Magazyn___Rozmieszczenie_Towarów.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid HorizontalAlignment="Center">
-        <views:DodajProduktView DataContext="{Binding CurrentViewModel}"/>
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type vms:DodajProduktViewModel}">
+                <views:DodajProduktView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:WyswietlProduktyViewModel}">
+                <views:WyswietlProduktyView/>
+            </DataTemplate>
+        </Grid.Resources>
+
+        <ContentControl Content="{Binding CurrentViewModel}"/>
+
         <!--
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>

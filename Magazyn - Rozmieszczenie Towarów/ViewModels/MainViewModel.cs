@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Magazyn___Rozmieszczenie_Towarów.Stores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,14 @@ namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        public ViewModelBase CurrentViewModel { get; }
+        private readonly NavigationStore _navigationStore;
 
-        public MainViewModel()
+
+        public MainViewModel(NavigationStore navigationStore)
         {
-            CurrentViewModel = new DodajProduktViewModel();
+            _navigationStore = navigationStore;
         }
+
+        public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
     }
 }
