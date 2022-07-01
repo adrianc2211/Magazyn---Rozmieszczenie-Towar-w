@@ -12,11 +12,11 @@ namespace Magazyn___Rozmieszczenie_Towarów.Models
         public string NazwaTowaru { get; set; }
         public float waga { get; set; }
 
-        public towary(int idTowaru, string nazwaTowaru, float waga)
+        public towary(int idTowaru, string nazwaTowaru, float Waga)
         {
             IdTowaru = idTowaru;
             NazwaTowaru = nazwaTowaru;
-            this.waga = waga;
+            waga = Waga;
         }
 
         public towary()

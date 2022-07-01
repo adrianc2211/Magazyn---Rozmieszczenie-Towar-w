@@ -19,7 +19,7 @@ namespace Magazyn___Rozmieszczenie_Towarów.DbContexts
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<Models.towary>("select id_towaru, nazwa_towaru, waga from towary", new DynamicParameters()).ToList();
+                var output = cnn.Query<Models.towary>("select id_towaru, nazwa_towaru, waga from towary").ToList();
                 return output;
             }
         }
