@@ -52,6 +52,7 @@ namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
         public ICommand GoToZajmijMiejsceViewCommand { get; }
         public ICommand GoToWsywietlRegalViewCommand { get; }
 
+
         public DodajProduktViewModel(NavigationStore navigationStore)
         {
             DodajCommand = new DodajCommand();
