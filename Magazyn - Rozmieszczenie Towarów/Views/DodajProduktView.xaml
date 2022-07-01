@@ -60,7 +60,7 @@
                 <SolidColorBrush Color="black" />
             </Rectangle.Fill>
         </Rectangle>
-        <!--Linia między stascxkpanelami-->
+        <!--Linia między stascxkpanelami--> 
         <Rectangle Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="4" Height="1" VerticalAlignment="Center">
             <Rectangle.Fill>
                 <SolidColorBrush Color="black" />
