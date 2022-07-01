@@ -18,5 +18,9 @@ namespace Magazyn___Rozmieszczenie_Towarów.Models
             NazwaTowaru = nazwaTowaru;
             this.waga = waga;
         }
+
+        public towary()
+        {
+        }
     }
 }

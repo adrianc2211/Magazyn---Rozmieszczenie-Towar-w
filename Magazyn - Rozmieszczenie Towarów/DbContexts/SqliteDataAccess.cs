@@ -1,9 +1,11 @@
 ﻿using Dapper;
 using Magazyn___Rozmieszczenie_Towarów.Models;
+using Magazyn___Rozmieszczenie_Towarów.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Linq;
 using System.Text;
@@ -13,16 +15,16 @@ namespace Magazyn___Rozmieszczenie_Towarów.DbContexts
 {
     public class SqliteDataAccess
     {
-        public static List<towary> LoadTowary()
+        public static List<Models.towary> LoadTowary()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<towary>("select * from towary", new DynamicParameters());
-                return output.ToList();
+                var output = cnn.Query<Models.towary>("select id_towaru, nazwa_towaru, waga from towary", new DynamicParameters()).ToList();
+                return output;
             }
         }
 
-        public static void DodajTowar(towary towar)
+public static void DodajTowar(towary towar)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {

@@ -1,4 +1,5 @@
 ﻿using Magazyn___Rozmieszczenie_Towarów.Commands;
+using Magazyn___Rozmieszczenie_Towarów.DbContexts;
 using Magazyn___Rozmieszczenie_Towarów.Stores;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,13 @@ namespace Magazyn___Rozmieszczenie_Towarów.ViewModels
             _towary = new ObservableCollection<TowaryViewModel>();
 
             _towary.Add(new TowaryViewModel(new Models.towary(2000,"Pergola z grotem",8)));
+            _towary.Add(new TowaryViewModel(new Models.towary(2002, "Pergola classic", 6)));
+            var dbtowaryl = SqliteDataAccess.LoadTowary();
+            foreach(var x in dbtowaryl)
+            {
+                _towary.Add(new TowaryViewModel(x));
+            }
+
 
             GoToDodajProductViewCommand = new GoToDodajProductViewCommand(navigationStore);
             GoToWyswietlProduktyViewCommand = new GoToWyswietlProduktyViewCommand(navigationStore);
